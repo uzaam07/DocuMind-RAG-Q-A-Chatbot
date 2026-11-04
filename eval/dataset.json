@@ -1,0 +1,353 @@
+[
+  {
+    "id": "q01",
+    "question": "What are the core hours at Meridian Labs?",
+    "expected_answer": "Core hours are 10:00 to 16:00, Monday to Friday.",
+    "expected_doc": "meridian_handbook.md",
+    "expected_page_or_section": "Section: Working Hours",
+    "answerable": true,
+    "type": "single"
+  },
+  {
+    "id": "q02",
+    "question": "How many days of paid annual leave do full-time employees get per year?",
+    "expected_answer": "Full-time employees get 25 days of paid annual leave per calendar year.",
+    "expected_doc": "meridian_handbook.md",
+    "expected_page_or_section": "Section: Leave Policy",
+    "answerable": true,
+    "type": "single"
+  },
+  {
+    "id": "q03",
+    "question": "What is the daily meal limit while travelling at Meridian Labs?",
+    "expected_answer": "The daily meal limit while travelling is 60 USD.",
+    "expected_doc": "meridian_handbook.md",
+    "expected_page_or_section": "Section: Expenses",
+    "answerable": true,
+    "type": "single"
+  },
+  {
+    "id": "q04",
+    "question": "What is the minimum password length required by the Meridian Labs handbook?",
+    "expected_answer": "Passwords must be at least 14 characters long.",
+    "expected_doc": "meridian_handbook.md",
+    "expected_page_or_section": "Section: Security",
+    "answerable": true,
+    "type": "single"
+  },
+  {
+    "id": "q05",
+    "question": "What prefix do live API keys have in the Aster Events API?",
+    "expected_answer": "Live keys start with the prefix ast_live_.",
+    "expected_doc": "aster_api_guide.pdf",
+    "expected_page_or_section": "Page 1",
+    "answerable": true,
+    "type": "single"
+  },
+  {
+    "id": "q06",
+    "question": "What are the default and maximum page sizes for Aster list endpoints?",
+    "expected_answer": "The default page size is 25 items and the maximum is 100 items.",
+    "expected_doc": "aster_api_guide.pdf",
+    "expected_page_or_section": "Page 3",
+    "answerable": true,
+    "type": "single"
+  },
+  {
+    "id": "q07",
+    "question": "Which header carries the webhook signature in the Aster Events API, and what algorithm does it use?",
+    "expected_answer": "The X-Aster-Signature header carries an HMAC-SHA256 digest of the request body.",
+    "expected_doc": "aster_api_guide.pdf",
+    "expected_page_or_section": "Page 4",
+    "answerable": true,
+    "type": "single"
+  },
+  {
+    "id": "q08",
+    "question": "Which HTTP status does the Aster API return when the rate limit is exceeded, and which header says how long to wait?",
+    "expected_answer": "It returns 429 with a Retry-After header giving the seconds to wait.",
+    "expected_doc": "aster_api_guide.pdf",
+    "expected_page_or_section": "Page 2",
+    "answerable": true,
+    "type": "single"
+  },
+  {
+    "id": "q09",
+    "question": "Which IP address opens the Lumen R2 admin page in a browser?",
+    "expected_answer": "Open 192.168.50.1 in a browser.",
+    "expected_doc": "lumen_router_faq.docx",
+    "expected_page_or_section": "Section: How do I set up the Lumen R2 for the first time?",
+    "answerable": true,
+    "type": "single"
+  },
+  {
+    "id": "q10",
+    "question": "How many seconds must the Reset button be held to factory reset the Lumen R2?",
+    "expected_answer": "Hold the recessed Reset button for 10 seconds.",
+    "expected_doc": "lumen_router_faq.docx",
+    "expected_page_or_section": "Section: How do I reset the Lumen R2 to factory settings?",
+    "answerable": true,
+    "type": "single"
+  },
+  {
+    "id": "q11",
+    "question": "What is the latest stable firmware version for the Lumen R2?",
+    "expected_answer": "The latest stable firmware version is 2.4.7.",
+    "expected_doc": "lumen_router_faq.docx",
+    "expected_page_or_section": "Section: How do I update the firmware?",
+    "answerable": true,
+    "type": "single"
+  },
+  {
+    "id": "q12",
+    "question": "How quickly must the on-call engineer respond to a Sev1 incident in Harbor Queue?",
+    "expected_answer": "Within 5 minutes.",
+    "expected_doc": "ops_runbook.txt",
+    "expected_page_or_section": "Section: INCIDENT SEVERITY LEVELS",
+    "answerable": true,
+    "type": "single"
+  },
+  {
+    "id": "q13",
+    "question": "Which port do clients use to connect to Harbor Queue?",
+    "expected_answer": "Clients connect on port 7420.",
+    "expected_doc": "ops_runbook.txt",
+    "expected_page_or_section": "Section: HARBOR QUEUE OVERVIEW",
+    "answerable": true,
+    "type": "single"
+  },
+  {
+    "id": "q14",
+    "question": "After how many failed delivery attempts does a Harbor Queue message move to the dead letter queue?",
+    "expected_answer": "After 5 failed delivery attempts.",
+    "expected_doc": "ops_runbook.txt",
+    "expected_page_or_section": "Section: DEAD LETTER QUEUE HANDLING",
+    "answerable": true,
+    "type": "single"
+  },
+  {
+    "id": "q15",
+    "question": "How much money can a new teleworker claim once to set up their workspace at home?",
+    "expected_answer": "A one-time home office stipend of 600 USD.",
+    "expected_doc": "meridian_handbook.md",
+    "expected_page_or_section": "Section: Remote Work",
+    "answerable": true,
+    "type": "paraphrase"
+  },
+  {
+    "id": "q16",
+    "question": "After how long off sick does a staff member need to bring a doctor's note?",
+    "expected_answer": "A medical certificate is required after 3 consecutive sick days.",
+    "expected_doc": "meridian_handbook.md",
+    "expected_page_or_section": "Section: Leave Policy",
+    "answerable": true,
+    "type": "paraphrase"
+  },
+  {
+    "id": "q17",
+    "question": "How often do employees get a new notebook computer?",
+    "expected_answer": "Standard laptops are replaced every 36 months.",
+    "expected_doc": "meridian_handbook.md",
+    "expected_page_or_section": "Section: Equipment",
+    "answerable": true,
+    "type": "paraphrase"
+  },
+  {
+    "id": "q18",
+    "question": "How often must credentials be renewed before they lapse in the Aster service?",
+    "expected_answer": "Keys expire 90 days after creation unless rotated.",
+    "expected_doc": "aster_api_guide.pdf",
+    "expected_page_or_section": "Page 1",
+    "answerable": true,
+    "type": "paraphrase"
+  },
+  {
+    "id": "q19",
+    "question": "For how long does a bookmark for fetching the next page of results stay valid in Aster?",
+    "expected_answer": "A cursor expires 15 minutes after it was issued.",
+    "expected_doc": "aster_api_guide.pdf",
+    "expected_page_or_section": "Page 3",
+    "answerable": true,
+    "type": "paraphrase"
+  },
+  {
+    "id": "q20",
+    "question": "How many times will Aster re-send a notification if my server fails to acknowledge it?",
+    "expected_answer": "Up to 6 times.",
+    "expected_doc": "aster_api_guide.pdf",
+    "expected_page_or_section": "Page 4",
+    "answerable": true,
+    "type": "paraphrase"
+  },
+  {
+    "id": "q21",
+    "question": "What does a blinking orange indicator on the Lumen R2 tell me?",
+    "expected_answer": "A flashing amber light means the router has power but cannot reach the internet.",
+    "expected_doc": "lumen_router_faq.docx",
+    "expected_page_or_section": "Section: What do the status light colors mean?",
+    "answerable": true,
+    "type": "paraphrase"
+  },
+  {
+    "id": "q22",
+    "question": "How long can a message sit in the failed-message holding area of Harbor Queue before it is purged?",
+    "expected_answer": "14 days.",
+    "expected_doc": "ops_runbook.txt",
+    "expected_page_or_section": "Section: DEAD LETTER QUEUE HANDLING",
+    "answerable": true,
+    "type": "paraphrase"
+  },
+  {
+    "id": "q23",
+    "question": "If I add up annual leave and paid conference leave, how many paid days off per year is that for a Meridian Labs employee?",
+    "expected_answer": "25 days of annual leave plus up to 5 days of conference leave, so 30 days.",
+    "expected_doc": "meridian_handbook.md",
+    "expected_page_or_section": [
+      "Section: Leave Policy",
+      "Section: Learning and Development"
+    ],
+    "answerable": true,
+    "type": "multi_hop"
+  },
+  {
+    "id": "q24",
+    "question": "How many days before the start date is a new hire's equipment delivered, and within how many business days must departing employees return it?",
+    "expected_answer": "Delivered 3 days before the start date; returned within 5 business days of the last day.",
+    "expected_doc": "meridian_handbook.md",
+    "expected_page_or_section": [
+      "Section: Onboarding",
+      "Section: Equipment"
+    ],
+    "answerable": true,
+    "type": "multi_hop"
+  },
+  {
+    "id": "q25",
+    "question": "How many requests per minute does the Aster Standard plan allow, and how many requests does a call with include_total=true count as?",
+    "expected_answer": "600 requests per minute; a call with include_total=true counts as 2 requests.",
+    "expected_doc": "aster_api_guide.pdf",
+    "expected_page_or_section": [
+      "Page 2",
+      "Page 3"
+    ],
+    "answerable": true,
+    "type": "multi_hop"
+  },
+  {
+    "id": "q26",
+    "question": "Which error code does the Aster API return when a key lacks a required scope, and what scopes exist?",
+    "expected_answer": "403 scope_missing; the scopes are events:read, events:write and tickets:write.",
+    "expected_doc": "aster_api_guide.pdf",
+    "expected_page_or_section": [
+      "Page 5",
+      "Page 1"
+    ],
+    "answerable": true,
+    "type": "multi_hop"
+  },
+  {
+    "id": "q27",
+    "question": "How long does a graceful Harbor Queue node restart drain connections, and how long does restoring a 100 GB snapshot take?",
+    "expected_answer": "The drain lasts up to 120 seconds; restoring a 100 GB snapshot takes about 25 minutes.",
+    "expected_doc": "ops_runbook.txt",
+    "expected_page_or_section": [
+      "Section: BROKER NODE RECOVERY",
+      "Section: BACKUP AND RESTORE"
+    ],
+    "answerable": true,
+    "type": "multi_hop"
+  },
+  {
+    "id": "q28",
+    "question": "How long does a Lumen R2 firmware update take, and how long should the router stay unplugged after a solid red light?",
+    "expected_answer": "The update takes about 4 minutes; unplug the router for 10 minutes after a solid red light.",
+    "expected_doc": "lumen_router_faq.docx",
+    "expected_page_or_section": [
+      "Section: How do I update the firmware?",
+      "Section: What do the status light colors mean?"
+    ],
+    "answerable": true,
+    "type": "multi_hop"
+  },
+  {
+    "id": "q29",
+    "question": "Does Meridian Labs offer stock options to employees?",
+    "expected_answer": "Not found in the documents.",
+    "expected_doc": null,
+    "expected_page_or_section": null,
+    "answerable": false,
+    "type": "unanswerable"
+  },
+  {
+    "id": "q30",
+    "question": "What is the dress code at the Meridian Labs office?",
+    "expected_answer": "Not found in the documents.",
+    "expected_doc": null,
+    "expected_page_or_section": null,
+    "answerable": false,
+    "type": "unanswerable"
+  },
+  {
+    "id": "q31",
+    "question": "How much is the monthly gym membership subsidy at Meridian Labs?",
+    "expected_answer": "Not found in the documents.",
+    "expected_doc": null,
+    "expected_page_or_section": null,
+    "answerable": false,
+    "type": "unanswerable"
+  },
+  {
+    "id": "q32",
+    "question": "Which programming languages have official Aster Events client libraries?",
+    "expected_answer": "Not found in the documents.",
+    "expected_doc": null,
+    "expected_page_or_section": null,
+    "answerable": false,
+    "type": "unanswerable"
+  },
+  {
+    "id": "q33",
+    "question": "Does the Aster Events API support GraphQL queries?",
+    "expected_answer": "Not found in the documents.",
+    "expected_doc": null,
+    "expected_page_or_section": null,
+    "answerable": false,
+    "type": "unanswerable"
+  },
+  {
+    "id": "q34",
+    "question": "What is the retail price of the Lumen R2 router?",
+    "expected_answer": "Not found in the documents.",
+    "expected_doc": null,
+    "expected_page_or_section": null,
+    "answerable": false,
+    "type": "unanswerable"
+  },
+  {
+    "id": "q35",
+    "question": "Does the Lumen R2 have a USB port for sharing a storage drive?",
+    "expected_answer": "Not found in the documents.",
+    "expected_doc": null,
+    "expected_page_or_section": null,
+    "answerable": false,
+    "type": "unanswerable"
+  },
+  {
+    "id": "q36",
+    "question": "How long are Harbor Queue audit logs retained?",
+    "expected_answer": "Not found in the documents.",
+    "expected_doc": null,
+    "expected_page_or_section": null,
+    "answerable": false,
+    "type": "unanswerable"
+  },
+  {
+    "id": "q37",
+    "question": "Which cloud provider hosts the Harbor Queue cluster?",
+    "expected_answer": "Not found in the documents.",
+    "expected_doc": null,
+    "expected_page_or_section": null,
+    "answerable": false,
+    "type": "unanswerable"
+  }
+]

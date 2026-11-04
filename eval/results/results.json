@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-11-01T06:41:31Z",
+  "mock": true,
+  "k": 5,
+  "dataset_size": 37,
+  "modes": {
+    "vector": {
+      "hit_at_k": 0.7857,
+      "mrr": 0.6667,
+      "answer_accuracy": 0.5357,
+      "citation_correctness": 0.6071,
+      "fallback_accuracy": 0.6757,
+      "latency_p50_ms": 13,
+      "latency_p95_ms": 15
+    },
+    "hybrid": {
+      "hit_at_k": 0.8214,
+      "mrr": 0.7173,
+      "answer_accuracy": 0.5357,
+      "citation_correctness": 0.6071,
+      "fallback_accuracy": 0.6757,
+      "latency_p50_ms": 14,
+      "latency_p95_ms": 18
+    },
+    "hybrid_rerank": {
+      "hit_at_k": 0.8929,
+      "mrr": 0.7946,
+      "answer_accuracy": 0.5536,
+      "citation_correctness": 0.6429,
+      "fallback_accuracy": 0.7027,
+      "latency_p50_ms": 13,
+      "latency_p95_ms": 15
+    }
+  },
+  "cache": {
+    "cold_ms": 14,
+    "warm_ms": 7,
+    "speedup": 2.0
+  }
+}

@@ -1,0 +1,54 @@
+Harbor Queue Incident Runbook
+Maintained by the Platform Reliability team.
+
+HARBOR QUEUE OVERVIEW
+
+Harbor Queue is the internal message broker used by the Tidewater platform. It runs as a cluster of 3 broker nodes named hbr-node-1, hbr-node-2 and hbr-node-3. Clients connect on port 7420, and metrics are exposed on port 9102. The cluster needs a quorum of 2 of 3 nodes to accept writes.
+
+All operational tasks are performed with the hqctl command line tool.
+
+INCIDENT SEVERITY LEVELS
+
+Sev1 means a total outage or any confirmed message loss. The on-call engineer must respond within 5 minutes.
+
+Sev2 means degraded service, for example consumer lag above 10 minutes. Respond within 15 minutes.
+
+Sev3 means a minor issue with a workaround. Respond within 4 hours.
+
+Sev4 means a cosmetic or documentation issue. Respond by the next business day.
+
+ON-CALL CONTACTS
+
+Page the primary engineer through the alias hq-primary. If there is no acknowledgement within 10 minutes, page hq-secondary. If neither has acknowledged within 20 minutes, escalate to the Engineering Manager on duty.
+
+All incident coordination happens in the chat channel #hq-incidents. For Sev1 incidents, also open the phone bridge on +1-555-0100, extension 7.
+
+QUEUE BACKLOG ALERTS
+
+The alert HQ-Backlog fires a warning when a queue holds more than 50,000 messages for 5 minutes. It becomes critical at 200,000 messages.
+
+First inspect the queue with: hqctl queue stats --queue NAME. If consumers are too slow, add capacity with: hqctl consumers scale --queue NAME --replicas 12. The maximum allowed number of replicas per queue is 24.
+
+BROKER NODE RECOVERY
+
+To restart an unhealthy node, run: hqctl node restart hbr-node-2 --graceful. A graceful restart drains connections for up to 120 seconds before stopping the process.
+
+If the node has not rejoined the cluster after 10 minutes, replace it with a fresh node and restore from the latest snapshot. Never restart more than one node at a time, because the cluster would lose its quorum.
+
+DEAD LETTER QUEUE HANDLING
+
+A message moves to the dead letter queue (DLQ) after 5 failed delivery attempts. Messages stay in the DLQ for 14 days and are then deleted.
+
+After the underlying bug is fixed, replay messages with: hqctl dlq replay --queue NAME --rate 100. The rate value is messages per second, and 100 is the default.
+
+BACKUP AND RESTORE
+
+Snapshots are taken every 6 hours and kept for 7 days in the storage bucket harbor-snapshots-eu. To list them, run: hqctl snapshot list.
+
+To restore, run: hqctl snapshot restore --id SNAPSHOT_ID. Restoring a 100 GB snapshot takes about 25 minutes, and the cluster is read-only while it runs.
+
+POST-INCIDENT REVIEW
+
+Every Sev1 and Sev2 incident requires a written review within 3 business days. Reviews are blameless and focus on process rather than people.
+
+A review meeting is held within 5 business days of the incident, and each action item needs an owner and a due date no later than 30 days out.
