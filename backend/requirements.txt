@@ -17,7 +17,7 @@ python-pptx==1.0.2
 beautifulsoup4==4.13.4
 Pillow==11.3.0
 pytesseract==0.3.13
-psycopg[binary]==3.2.9
+psycopg[binary]==3.2.13
 pypdfium2==4.30.0
 redis==6.4.0
 rq==2.5.0
